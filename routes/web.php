@@ -22,11 +22,7 @@ use App\Models\Website;
 // Website routes
 // ================================================================================================
 Route::get("/", [WebsiteController::class, "create"]);
-Route::get("/websites", [WebsiteController::class, "index"])->name("websites.index");
+Route::get("/websites", [WebsiteController::class, "index"]);
 Route::get("/websites/{website}", [WebsiteController::class, "show"]);
 
 Route::post("/websites", [WebsiteController::class, "store"]);
-
-// Scraper routes
-// ================================================================================================
-Route::post("/scrape", [ScraperController::class, "scrapeWebsite"]);
